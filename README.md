@@ -29,4 +29,3 @@ Whether you're a current student or alumni
 ---
 
 *GaTech Indian*
-# Test commit to trigger workflow
