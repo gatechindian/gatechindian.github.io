@@ -40,6 +40,15 @@ jobs:
         env:
           NODE_ENV: production
       
+      - name: Debug - List files
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Files in current directory:"
+          ls -la
+          echo "Files in out directory (if exists):"
+          ls -la out/ || echo "out directory does not exist"
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
