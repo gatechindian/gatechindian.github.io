@@ -6,15 +6,11 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'GaTech Indian Community',
-  description: 'A community for Indians pursuing Georgia Tech Online Masters of Science in Computer Science',
-  keywords: 'Georgia Tech, OMSCS, Indian community, Computer Science, Masters',
+  title: 'GaTech Indian - Georgia Tech Indian Student Community',
+  description: 'Connect with fellow Indian students at Georgia Tech. Join our community for academic support, cultural events, and networking opportunities.',
+  keywords: 'Georgia Tech, Indian students, community, networking, academic support',
   authors: [{ name: 'GaTech Indian Community' }],
-  openGraph: {
-    title: 'GaTech Indian Community',
-    description: 'A community for Indians pursuing Georgia Tech Online Masters of Science in Computer Science',
-    type: 'website',
-  },
+  viewport: 'width=device-width, initial-scale=1',
 }
 
 export default function RootLayout({
@@ -23,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <body className={inter.className}>
         {children}
       </body>

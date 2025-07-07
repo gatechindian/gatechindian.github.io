@@ -1,152 +1,193 @@
 
 'use client'
 
-import { MessageCircle, Users, ExternalLink, Calendar, FileText, Video } from 'lucide-react'
+import { MessageCircle, Users, MessageSquare, ArrowUpRight, Star, Calendar, Zap } from 'lucide-react'
 
-const CommunityLinks = () => {
-  const handleDiscordClick = () => {
-    // Replace with actual Discord invite link
-    window.open('https://discord.gg/your-discord-invite', '_blank')
-  }
+export default function CommunityLinks() {
+  const communityPlatforms = [
+    {
+      name: 'WhatsApp Groups',
+      description: 'Join our various WhatsApp groups for real-time discussions, housing updates, and quick help',
+      icon: <MessageCircle className="w-8 h-8" />,
+      color: 'bg-green-500',
+      hoverColor: 'hover:bg-green-600',
+      link: 'https://chat.whatsapp.com/gatech-indian',
+      features: ['Real-time messaging', 'Housing groups', 'City-specific chats', 'Academic discussions'],
+      members: '500+ members'
+    },
+    {
+      name: 'LinkedIn Network',
+      description: 'Connect professionally with alumni and current students across industries',
+      icon: <Users className="w-8 h-8" />,
+      color: 'bg-blue-600',
+      hoverColor: 'hover:bg-blue-700',
+      link: 'https://linkedin.com/company/gatech-indian',
+      features: ['Professional networking', 'Job opportunities', 'Industry insights', 'Alumni connections'],
+      members: '1200+ professionals'
+    },
+    {
+      name: 'Discord Server',
+      description: 'Engage in organized discussions, study groups, and gaming sessions',
+      icon: <MessageSquare className="w-8 h-8" />,
+      color: 'bg-indigo-500',
+      hoverColor: 'hover:bg-indigo-600',
+      link: 'https://discord.gg/gatech-indian',
+      features: ['Study groups', 'Gaming channels', 'Voice chats', 'Project collaboration'],
+      members: '300+ active users'
+    }
+  ]
 
-  const handleLinkedInClick = () => {
-    // Replace with actual LinkedIn group link
-    window.open('https://www.linkedin.com/groups/your-linkedin-group', '_blank')
-  }
+  const benefits = [
+    {
+      icon: <Star className="w-6 h-6" />,
+      title: 'Instant Support',
+      description: 'Get help from community members 24/7'
+    },
+    {
+      icon: <Calendar className="w-6 h-6" />,
+      title: 'Event Updates',
+      description: 'Stay informed about meetups and activities'
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: 'Quick Connections',
+      description: 'Find roommates, study partners, and friends'
+    }
+  ]
 
   return (
-    <section id="community" className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Join Our <span className="text-gradient">Community</span>
-          </h2>
-          <p className="text-xl text-gray-600">
-            Connect with fellow students through our active Discord and LinkedIn communities
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Discord Community */}
-          <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 custom-shadow hover-lift">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="bg-indigo-600 p-3 rounded-lg">
-                <MessageCircle size={32} className="text-white" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900">Discord Community</h3>
-                <p className="text-gray-600">Real-time chat and collaboration</p>
-              </div>
-            </div>
-
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center gap-3">
-                <div className="bg-indigo-100 p-2 rounded-full">
-                  <MessageCircle size={16} className="text-indigo-600" />
-                </div>
-                <span className="text-gray-700">24/7 active chat channels</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="bg-indigo-100 p-2 rounded-full">
-                  <FileText size={16} className="text-indigo-600" />
-                </div>
-                <span className="text-gray-700">Course-specific study groups</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="bg-indigo-100 p-2 rounded-full">
-                  <Video size={16} className="text-indigo-600" />
-                </div>
-                <span className="text-gray-700">Voice channels for study sessions</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="bg-indigo-100 p-2 rounded-full">
-                  <Calendar size={16} className="text-indigo-600" />
-                </div>
-                <span className="text-gray-700">Event announcements and reminders</span>
-              </div>
-            </div>
-
-            <button
-              onClick={handleDiscordClick}
-              className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
-            >
-              Join Discord Server
-              <ExternalLink size={18} />
-            </button>
+    <section id="community-links" className="py-16 lg:py-24 bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold gatech-navy mb-6">
+              Join Our Community
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Connect with fellow GaTech Indian students and alumni across multiple platforms. Choose the ones that work best for you!
+            </p>
           </div>
 
-          {/* LinkedIn Community */}
-          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 custom-shadow hover-lift">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="bg-blue-600 p-3 rounded-lg">
-                <Users size={32} className="text-white" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900">LinkedIn Group</h3>
-                <p className="text-gray-600">Professional networking and opportunities</p>
-              </div>
-            </div>
-
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center gap-3">
-                <div className="bg-blue-100 p-2 rounded-full">
-                  <Users size={16} className="text-blue-600" />
+          {/* Benefits Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center p-6 bg-white rounded-lg card-shadow">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full mb-4">
+                  {benefit.icon}
                 </div>
-                <span className="text-gray-700">Professional networking</span>
+                <h3 className="text-lg font-semibold gatech-navy mb-2">{benefit.title}</h3>
+                <p className="text-gray-600">{benefit.description}</p>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="bg-blue-100 p-2 rounded-full">
-                  <FileText size={16} className="text-blue-600" />
-                </div>
-                <span className="text-gray-700">Job postings and referrals</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="bg-blue-100 p-2 rounded-full">
-                  <Video size={16} className="text-blue-600" />
-                </div>
-                <span className="text-gray-700">Industry insights and discussions</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="bg-blue-100 p-2 rounded-full">
-                  <Calendar size={16} className="text-blue-600" />
-                </div>
-                <span className="text-gray-700">Career development resources</span>
-              </div>
-            </div>
-
-            <button
-              onClick={handleLinkedInClick}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
-            >
-              Join LinkedIn Group
-              <ExternalLink size={18} />
-            </button>
-          </div>
-        </div>
-
-        {/* Community Stats */}
-        <div className="mt-16 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-8 custom-shadow">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">Community Impact</h3>
-            <p className="text-gray-600">See how our community is making a difference</p>
+            ))}
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-600 mb-2">500+</div>
-              <div className="text-gray-600">Active Members</div>
+          {/* Community Platforms */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {communityPlatforms.map((platform, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl p-6 card-shadow hover-shadow hover-scale transition-all duration-300"
+              >
+                {/* Platform Header */}
+                <div className="flex items-center mb-4">
+                  <div className={`p-3 rounded-lg ${platform.color} text-white mr-4`}>
+                    {platform.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold gatech-navy">{platform.name}</h3>
+                    <p className="text-sm text-gray-500">{platform.members}</p>
+                  </div>
+                </div>
+
+                {/* Description */}
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  {platform.description}
+                </p>
+
+                {/* Features */}
+                <div className="mb-6">
+                  <h4 className="font-semibold gatech-navy mb-3">Key Features:</h4>
+                  <ul className="space-y-2">
+                    {platform.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Join Button */}
+                <a
+                  href={platform.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg text-white font-medium transition-all duration-200 ${platform.color} ${platform.hoverColor} hover:transform hover:scale-105`}
+                >
+                  Join {platform.name}
+                  <ArrowUpRight className="w-4 h-4 ml-2" />
+                </a>
+              </div>
+            ))}
+          </div>
+
+          {/* Call to Action */}
+          <div className="mt-16 text-center">
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl p-8 lg:p-12 text-white">
+              <h3 className="text-2xl lg:text-3xl font-bold mb-4">
+                Ready to Connect?
+              </h3>
+              <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+                Join thousands of GaTech Indian students and alumni who are already part of our vibrant community. Your journey starts here!
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="https://chat.whatsapp.com/gatech-indian"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center justify-center"
+                >
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Join WhatsApp
+                </a>
+                <a
+                  href="https://linkedin.com/company/gatech-indian"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-200 inline-flex items-center justify-center"
+                >
+                  <Users className="w-5 h-5 mr-2" />
+                  Connect on LinkedIn
+                </a>
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-600 mb-2">50+</div>
-              <div className="text-gray-600">Cities Represented</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-600 mb-2">200+</div>
-              <div className="text-gray-600">Job Referrals</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-600 mb-2">100+</div>
-              <div className="text-gray-600">Meetups Organized</div>
+          </div>
+
+          {/* Community Guidelines */}
+          <div className="mt-12">
+            <div className="bg-white rounded-lg p-6 card-shadow">
+              <h3 className="text-lg font-semibold gatech-navy mb-4">Community Guidelines</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600">
+                <div>
+                  <h4 className="font-medium gatech-navy mb-2">✅ Do:</h4>
+                  <ul className="space-y-1">
+                    <li>• Be respectful and inclusive</li>
+                    <li>• Share relevant opportunities</li>
+                    <li>• Help fellow community members</li>
+                    <li>• Use appropriate channels for discussions</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-medium gatech-navy mb-2">❌ Don't:</h4>
+                  <ul className="space-y-1">
+                    <li>• Spam or self-promote excessively</li>
+                    <li>• Share personal information publicly</li>
+                    <li>• Engage in discriminatory behavior</li>
+                    <li>• Post irrelevant content</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -154,5 +195,3 @@ const CommunityLinks = () => {
     </section>
   )
 }
-
-export default CommunityLinks
