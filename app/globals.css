@@ -1,13 +1,32 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --gatech-navy: #003057;
-  --gatech-gold: #B3A369;
-  --gatech-gold-light: #EDEAA3;
-  --gatech-gray: #54565A;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+    --primary: 45 35% 55%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 210 40% 18%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 210 40% 98%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 45 35% 55%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 45 35% 55%;
+    --radius: 0.5rem;
+  }
 }
 
 @layer base {
@@ -16,61 +35,88 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
   }
 }
 
 @layer components {
-  .gatech-navy {
-    color: var(--gatech-navy);
-  }
-  
   .gatech-gold {
-    color: var(--gatech-gold);
+    color: #B3A369;
   }
-  
-  .bg-gatech-navy {
-    background-color: var(--gatech-navy);
+  .gatech-navy {
+    color: #003057;
   }
-  
-  .bg-gatech-gold {
-    background-color: var(--gatech-gold);
+  .section-padding {
+    @apply py-16 md:py-24;
   }
-  
-  .border-gatech-gold {
-    border-color: var(--gatech-gold);
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
-  
-  .hero-gradient {
-    background: linear-gradient(135deg, var(--gatech-navy) 0%, #1e3a8a 100%);
-  }
-  
-  .card-shadow {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  }
-  
-  .card-shadow-hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
-/* Smooth scrolling */
-html {
+.smooth-scroll {
   scroll-behavior: smooth;
 }
 
-/* Hover effects */
-.hover-scale {
-  transition: transform 0.3s ease;
+.hero-overlay {
+  background: linear-gradient(135deg, rgba(0, 48, 87, 0.8), rgba(179, 163, 105, 0.3));
 }
 
-.hover-scale:hover {
-  transform: scale(1.05);
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
 }
 
-.hover-shadow {
-  transition: box-shadow 0.3s ease;
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
 }
 
-.hover-shadow:hover {
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.8s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

@@ -1,15 +1,21 @@
 
-import Hero from '../components/hero'
-import FAQ from '../components/faq'
-import CommunityLinks from '../components/community-links'
-import Footer from '../components/footer'
+import Navigation from '@/components/navigation'
+import HeroSection from '@/components/hero-section'
+import AboutSection from '@/components/about-section'
+import CommunityHub from '@/components/community-hub'
+import ResourcesSection from '@/components/resources-section'
+import FAQSection from '@/components/faq-section'
+import Footer from '@/components/footer'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <Hero />
-      <FAQ />
-      <CommunityLinks />
+    <main>
+      <Navigation />
+      <HeroSection />
+      <AboutSection />
+      <CommunityHub />
+      <ResourcesSection />
+      <FAQSection />
       <Footer />
     </main>
   )

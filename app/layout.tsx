@@ -1,16 +1,25 @@
 
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+const poppins = Poppins({ 
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-poppins',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: 'GaTech Indian - Georgia Tech Indian Student Community',
-  description: 'Connect with fellow Indian students at Georgia Tech. Join our community for academic support, cultural events, and networking opportunities.',
-  keywords: 'Georgia Tech, Indian students, community, networking, academic support',
-  authors: [{ name: 'GaTech Indian Community' }],
-  viewport: 'width=device-width, initial-scale=1',
+  title: 'GaTech Indian - Online Masters Community',
+  description: 'A community for Indians pursuing Georgia Tech Online Masters courses (OMSCS, OMSA, OM Cybersecurity)',
+  keywords: 'Georgia Tech, OMSCS, OMSA, OM Cybersecurity, Indian students, online masters',
 }
 
 export default function RootLayout({
@@ -19,8 +28,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className="smooth-scroll">
+      <body className={`${inter.variable} ${poppins.variable} antialiased`}>
         {children}
       </body>
     </html>
