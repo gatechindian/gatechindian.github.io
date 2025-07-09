@@ -6,13 +6,14 @@ import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 
 export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
+      setIsScrolled(window.scrollY > 100)
     }
+
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -22,105 +23,80 @@ export default function Navigation() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
     }
-    setIsOpen(false)
+    setIsMobileMenuOpen(false)
   }
+
+  const navItems = [
+    { name: 'Home', id: 'hero' },
+    { name: 'About', id: 'about' },
+    { name: 'Course Logistics', id: 'course-logistics' },
+    { name: 'Job Search', id: 'job-search' },
+    { name: 'Meetups', id: 'meetups' },
+    { name: 'Resources', id: 'resources' },
+    { name: 'FAQ', id: 'faq' },
+  ]
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white shadow-lg' : 'bg-white/90 backdrop-blur-sm'
+      isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
     }`}>
-      <div className="container-custom">
-        <div className="flex items-center justify-between h-16">
+      <div className="section-container">
+        <div className="flex items-center justify-between py-4">
           <div className="flex items-center space-x-3">
-            <Image
-              src="/icon.png"
-              alt="GaTech Indian"
-              width={40}
-              height={40}
-              className="rounded-full"
-            />
-            <span className="text-xl font-bold gatech-navy">GaTech Indian</span>
+            <div className="relative w-10 h-10">
+              <Image
+                src="/icon.png"
+                alt="GaTech Indian Icon"
+                fill
+                className="object-contain"
+              />
+            </div>
+            <span className={`font-poppins font-semibold text-lg ${
+              isScrolled ? 'text-gray-900' : 'text-white'
+            }`}>
+              GaTech Indian
+            </span>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <button
-              onClick={() => scrollToSection('home')}
-              className="text-gray-700 hover:text-[#B3A369] transition-colors"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => scrollToSection('about')}
-              className="text-gray-700 hover:text-[#B3A369] transition-colors"
-            >
-              About
-            </button>
-            <button
-              onClick={() => scrollToSection('community')}
-              className="text-gray-700 hover:text-[#B3A369] transition-colors"
-            >
-              Community
-            </button>
-            <button
-              onClick={() => scrollToSection('resources')}
-              className="text-gray-700 hover:text-[#B3A369] transition-colors"
-            >
-              Resources
-            </button>
-            <button
-              onClick={() => scrollToSection('faq')}
-              className="text-gray-700 hover:text-[#B3A369] transition-colors"
-            >
-              FAQ
-            </button>
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className={`font-medium transition-colors hover:text-yellow-600 ${
+                  isScrolled ? 'text-gray-700 hover:text-yellow-700' : 'text-white hover:text-yellow-300'
+                }`}
+              >
+                {item.name}
+              </button>
+            ))}
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-[#B3A369] p-2"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className={`md:hidden p-2 ${
+              isScrolled ? 'text-gray-700' : 'text-white'
+            }`}
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden bg-white border-t">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              <button
-                onClick={() => scrollToSection('home')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-[#B3A369] hover:bg-gray-50"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection('about')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-[#B3A369] hover:bg-gray-50"
-              >
-                About
-              </button>
-              <button
-                onClick={() => scrollToSection('community')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-[#B3A369] hover:bg-gray-50"
-              >
-                Community
-              </button>
-              <button
-                onClick={() => scrollToSection('resources')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-[#B3A369] hover:bg-gray-50"
-              >
-                Resources
-              </button>
-              <button
-                onClick={() => scrollToSection('faq')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-[#B3A369] hover:bg-gray-50"
-              >
-                FAQ
-              </button>
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-gray-200 py-4">
+            <div className="flex flex-col space-y-4">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="text-left px-4 py-2 text-gray-700 hover:text-yellow-700 hover:bg-gray-50 rounded-md transition-colors"
+                >
+                  {item.name}
+                </button>
+              ))}
             </div>
           </div>
         )}

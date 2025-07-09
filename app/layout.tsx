@@ -1,25 +1,24 @@
 
-import type { Metadata } from 'next'
-import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
+import { Inter, Poppins } from 'next/font/google'
 
-const inter = Inter({ 
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-})
-
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const poppins = Poppins({ 
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
+  subsets: ['latin'], 
   variable: '--font-poppins',
-  display: 'swap',
+  weight: ['400', '500', '600', '700']
 })
 
-export const metadata: Metadata = {
-  title: 'GaTech Indian - Online Masters Community',
-  description: 'A community for Indians pursuing Georgia Tech Online Masters courses (OMSCS, OMSA, OM Cybersecurity)',
-  keywords: 'Georgia Tech, OMSCS, OMSA, OM Cybersecurity, Indian students, online masters',
+export const metadata = {
+  title: 'GaTech Indian - Community for Indian Students',
+  description: 'Online community for Indians pursuing Georgia Tech Online Masters courses (OMSCS, OMSA, OM Cyber Security)',
+  keywords: 'Georgia Tech, OMSCS, OMSA, Indian students, online masters, cyber security',
+  author: 'GaTech Indian Community',
+}
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
@@ -29,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="smooth-scroll">
-      <body className={`${inter.variable} ${poppins.variable} antialiased`}>
+      <body className={`${inter.variable} ${poppins.variable}`}>
         {children}
       </body>
     </html>
