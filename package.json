@@ -4,7 +4,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:static": "next build",
     "start": "next start",
     "lint": "next lint"
   },
