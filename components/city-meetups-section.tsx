@@ -9,60 +9,42 @@ const cities = [
   {
     name: 'Hyderabad',
     description: 'Tech hub of Telangana with a growing OMSCS community',
-    meetupFrequency: 'Monthly',
-    memberCount: '150+',
-    nextMeetup: 'First Saturday',
-    location: 'Hitech City',
+    meetupFrequency: 'Semester End',
     color: 'bg-orange-500',
     icon: MapPin
   },
   {
     name: 'Bangalore',
     description: 'India\'s Silicon Valley with the largest OMSCS community',
-    meetupFrequency: 'Bi-weekly',
-    memberCount: '300+',
-    nextMeetup: 'Every other Sunday',
-    location: 'Koramangala',
+    meetupFrequency: 'Monthly',
     color: 'bg-green-500',
     icon: MapPin
   },
   {
     name: 'Delhi',
     description: 'National capital region with active tech professionals',
-    meetupFrequency: 'Monthly',
-    memberCount: '200+',
-    nextMeetup: 'Last Sunday',
-    location: 'Gurgaon',
+    meetupFrequency: 'Semester End',
     color: 'bg-blue-500',
     icon: MapPin
   },
   {
     name: 'Mumbai',
     description: 'Financial capital with diverse tech community',
-    meetupFrequency: 'Monthly',
-    memberCount: '180+',
-    nextMeetup: 'Second Saturday',
-    location: 'Andheri West',
+    meetupFrequency: 'Semester End',
     color: 'bg-purple-500',
     icon: MapPin
   },
   {
     name: 'Pune',
     description: 'Oxford of the East with strong academic presence',
-    meetupFrequency: 'Monthly',
-    memberCount: '120+',
-    nextMeetup: 'Third Sunday',
-    location: 'Koregaon Park',
+    meetupFrequency: 'Semester End',
     color: 'bg-red-500',
     icon: MapPin
   },
   {
     name: 'Chennai',
     description: 'Gateway to South India with vibrant tech ecosystem',
-    meetupFrequency: 'Monthly',
-    memberCount: '140+',
-    nextMeetup: 'Fourth Saturday',
-    location: 'T Nagar',
+    meetupFrequency: 'Semester End',
     color: 'bg-teal-500',
     icon: MapPin
   }
@@ -116,9 +98,6 @@ export function CityMeetupsSection() {
                       <h3 className="text-xl font-bold text-foreground mb-1">
                         {city.name}
                       </h3>
-                      <p className="text-sm text-muted-foreground">
-                        {city.location}
-                      </p>
                     </div>
                   </div>
                   
@@ -126,26 +105,12 @@ export function CityMeetupsSection() {
                     {city.description}
                   </p>
                   
-                  <div className="space-y-2 mb-6">
+                  <div className="space-y-2">
                     <div className="flex items-center gap-2 text-sm">
                       <Calendar className="w-4 h-4 text-primary" />
                       <span className="text-foreground font-medium">{city.meetupFrequency}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-sm">
-                      <Users className="w-4 h-4 text-primary" />
-                      <span className="text-foreground">{city.memberCount} members</span>
-                    </div>
-                    <div className="text-xs text-muted-foreground">
-                      Next: {city.nextMeetup}
-                    </div>
                   </div>
-                  
-                  <Button 
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-                    size="sm"
-                  >
-                    Join Meetup
-                  </Button>
                 </CardContent>
               </Card>
             ))}
@@ -186,20 +151,6 @@ export function CityMeetupsSection() {
                     </a>
                   </Button>
                   
-                  <Button 
-                    asChild
-                    size="lg"
-                    variant="outline"
-                    className="border-primary text-primary hover:bg-primary/10"
-                  >
-                    <a 
-                      href="mailto:contact@gatechindian.com" 
-                      className="flex items-center gap-2"
-                    >
-                      <MapPin className="w-5 h-5" />
-                      Organize Meetup
-                    </a>
-                  </Button>
                 </div>
               </CardContent>
             </Card>

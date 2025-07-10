@@ -34,6 +34,20 @@ const resources = [
     description: 'Official Georgia Tech Slack workspace for students, alumni, and faculty collaboration.',
     link: 'https://gatech.enterprise.slack.com',
     category: 'Official'
+  },
+  {
+    icon: MessageSquare,
+    title: 'OMS Free and Discounted',
+    description: 'Free and discounted software for OMSers',
+    link: 'https://sites.gatech.edu/omsfreeanddiscounted/',
+    category: 'Community'
+  },
+  {
+    icon: MessageSquare,
+    title: 'MyCloud',
+    description: 'MyCloud is a windows host machine with access to Adobe creative suite, AutoCAD, Matlab and ANSYS.',
+    link: 'https://mycloud.gatech.edu',
+    category: 'Official'
   }
 ]
 

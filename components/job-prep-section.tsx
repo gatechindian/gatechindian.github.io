@@ -268,7 +268,7 @@ export function JobPrepSection() {
                       Job Prep Community
                     </h3>
                     <p className="text-muted-foreground">
-                      Connect with fellow job seekers, share interview experiences, and get career advice
+                      Connect with fellow job seekers and find accountability buddy, share interview experiences, and get career advice
                     </p>
                   </div>
                 </div>
@@ -291,20 +291,6 @@ export function JobPrepSection() {
                     </a>
                   </Button>
                   
-                  <Button 
-                    asChild
-                    size="lg"
-                    variant="outline"
-                    className="border-primary text-primary hover:bg-primary/10"
-                  >
-                    <a 
-                      href="mailto:contact@gatechindian.com" 
-                      className="flex items-center gap-2"
-                    >
-                      <MessageSquare className="w-5 h-5" />
-                      Share Resources
-                    </a>
-                  </Button>
                 </div>
               </CardContent>
             </Card>

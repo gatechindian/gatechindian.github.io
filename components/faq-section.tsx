@@ -11,10 +11,6 @@ const faqData = [
     category: 'Application Journey',
     questions: [
       {
-        question: 'Who is eligible to apply?',
-        answer: 'The admissions committee looks for a strong academic background and readiness for a rigorous graduate curriculum. Preferred qualifications include an undergraduate degree in computer science or related field (mathematics, computer engineering, electrical engineering) with a cumulative GPA of 3.0 or higher on a 4.0 scale. However, applicants who do not meet these preferred criteria are still encouraged to apply and are evaluated on a case-by-case basis.'
-      },
-      {
         question: 'How can I prepare if I have a non-CS background?',
         answer: 'Take for-credit courses: Enroll in and earn good grades (B or better) in upper-level computer science courses from an accredited institution. Master key concepts including Object-Oriented Design Principles, Data Structures, and Algorithms. You can also utilize Georgia Tech\'s MOOCs and Professional Certificate programs on platforms like edX, though these are rarely sufficient on their own for admission.'
       },
@@ -22,26 +18,14 @@ const faqData = [
         question: 'What are the key application requirements for Indian students?',
         answer: 'English Language Proficiency: TOEFL/IELTS scores are mandatory (minimum TOEFL score is 100). Academic Transcripts: Submit scans of official transcripts with both native language documents AND official English translations. GPA Conversion: Do not convert your GPA yourself - Georgia Tech will perform the official conversion. Letters of Recommendation: Three letters required from academic or professional references. GRE is not required for OMSCS.'
       },
-      {
-        question: 'What are the application deadlines?',
-        answer: 'Fall Semester Admission: March 1. Spring Semester Admission: August 15. All materials, including letters of recommendation, must be submitted by the deadline. Admissions decisions are typically released 10-12 weeks after the deadline.'
-      }
     ]
   },
   {
     category: 'Financials',
     questions: [
       {
-        question: 'How much does the program cost?',
-        answer: 'Tuition is charged on a per-credit-hour basis, plus mandatory semester fees. A minimum of 30 credit hours is required to graduate. The total program cost is significantly lower than traditional on-campus programs. For current figures, refer to the Official Class Tuition and Fees Information on the Georgia Tech Bursar\'s Office website.'
-      },
-      {
         question: 'How do I pay tuition from India?',
         answer: 'Upon admission, you will receive detailed instructions on the payment process. Payments are made through Georgia Tech\'s official student portal. International students typically use credit cards or international wire transfers to pay their fees. Payment deadlines are published on the university\'s official academic calendar.'
-      },
-      {
-        question: 'Are there scholarships or financial aid for international students?',
-        answer: 'Yes, students in these online programs, including international students, are eligible to qualify for financial aid just like any other Georgia Tech graduate student. Contact the Office of Scholarships and Financial Aid directly for specific options and eligibility requirements.'
       },
       {
         question: 'Can I get my tuition reimbursed by my employer?',
@@ -52,10 +36,6 @@ const faqData = [
   {
     category: 'Program Structure',
     questions: [
-      {
-        question: 'How is the program structured?',
-        answer: 'A minimum of 30 credit hours is required for the master\'s degree. Students choose a specialization requiring 15-18 credit hours of specific coursework, with the remaining 12-15 hours as free electives. To be fully admitted after conditional acceptance, students must complete two designated "foundational courses" with a grade of B or better within their first year.'
-      },
       {
         question: 'How do I choose my first course?',
         answer: 'Start with one course if you are working full-time to acclimate to the workload. Choose a foundational course for your first semester. Consult community resources like OMSCentral.com and the /r/OMSCS subreddit for student reviews and discussions about course difficulty and workload.'
@@ -97,10 +77,6 @@ const faqData = [
       {
         question: 'Will my diploma say "Online"?',
         answer: 'No. The diploma reads "Master of Science in Computer Science" (or Analytics/Cybersecurity). It is identical to the diploma awarded to on-campus students and carries the full prestige of a Georgia Tech degree.'
-      },
-      {
-        question: 'Can I network with other professionals in the program?',
-        answer: 'Absolutely. The program attracts a global cohort of highly motivated professionals. Networking happens through group projects, online forums (Piazza or Ed Discussion), and vibrant Reddit and Slack communities for mentorship and career discussions.'
       },
       {
         question: 'Does the program qualify me for OPT in the U.S.?',
