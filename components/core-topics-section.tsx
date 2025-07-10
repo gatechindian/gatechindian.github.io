@@ -29,10 +29,10 @@ const topics = [
   },
   {
     icon: MapPin,
-    title: 'Location-Specific Meetups',
+    title: 'City Meetups',
     description: 'Connect with fellow students in your city. Organize study groups, networking events, and social gatherings.',
     details: [
-      'City-wise student meetups',
+      'City based student meetups',
       'Local networking events and gatherings',
       'Alumni connections'
     ]
