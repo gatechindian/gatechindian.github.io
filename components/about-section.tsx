@@ -44,8 +44,9 @@ export function AboutSection() {
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Just like in-person college education online masters students also have classmates albeit virtual.
-                Connect with other Indian students and grow leveraging the collective knowledge and experience of current students and alumni.
+              Just like in regular college, online master's students have classmates too—just virtually. 
+              Connect with other Indian students and make the most of everyone's knowledge and experience, 
+              including current students and alumni. Let's grow together!
               </p>
             </div>
             
