@@ -71,13 +71,13 @@ export function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo and Brand */}
           <div 
-            className="flex items-center gap-3 cursor-pointer"
+            className="flex items-center gap-2 sm:gap-3 cursor-pointer"
             onClick={() => scrollToSection('#hero')}
           >
-            <div className="relative w-10 h-10">
+            <div className="relative w-8 h-8 sm:w-10 sm:h-10">
               <Image
                 src="/icon.png"
                 alt="GaTech Indian Community Logo"
@@ -87,7 +87,7 @@ export function Header() {
               />
             </div>
             <div className="hidden sm:block">
-              <h1 className={`text-xl font-bold transition-colors duration-300 ${
+              <h1 className={`text-lg sm:text-xl font-bold transition-colors duration-300 ${
                 isScrolled ? 'text-foreground' : 'text-white'
               }`}>
                 GaTech Indian
@@ -113,7 +113,7 @@ export function Header() {
           </nav>
 
           {/* Social Links & Mobile Menu */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 sm:gap-4">
             {/* Social Links - Desktop */}
             <div className="hidden md:flex items-center gap-3">
               {socialLinks.map((social) => (
@@ -147,7 +147,7 @@ export function Header() {
                 <Button
                   variant="ghost"
                   size="sm"
-                  className={`lg:hidden transition-colors duration-300 ${
+                  className={`lg:hidden transition-colors duration-300 p-2 ${
                     isScrolled ? 'text-foreground' : 'text-white'
                   }`}
                   aria-label="Open navigation menu"
@@ -157,13 +157,13 @@ export function Header() {
               </SheetTrigger>
               <SheetContent 
                 side="right" 
-                className="w-80 sm:w-96 bg-background border-border"
+                className="w-full max-w-sm bg-background border-border"
               >
                 <div className="flex flex-col h-full">
                   {/* Mobile Header */}
-                  <div className="flex items-center justify-between pb-6 border-b border-border">
-                    <div className="flex items-center gap-3">
-                      <div className="relative w-8 h-8">
+                  <div className="flex items-center justify-between pb-4 sm:pb-6 border-b border-border">
+                    <div className="flex items-center gap-2 sm:gap-3">
+                      <div className="relative w-6 h-6 sm:w-8 sm:h-8">
                         <Image
                           src="/icon.png"
                           alt="GaTech Indian Community Logo"
@@ -172,7 +172,7 @@ export function Header() {
                         />
                       </div>
                       <div>
-                        <h2 className="text-lg font-bold text-foreground">
+                        <h2 className="text-base sm:text-lg font-bold text-foreground">
                           GaTech Indian
                         </h2>
                       </div>
@@ -182,18 +182,19 @@ export function Header() {
                       size="sm"
                       onClick={() => setIsOpen(false)}
                       aria-label="Close navigation menu"
+                      className="p-2"
                     >
                       <X className="w-5 h-5" />
                     </Button>
                   </div>
 
                   {/* Mobile Navigation */}
-                  <nav className="flex flex-col gap-2 py-6 flex-1">
+                  <nav className="flex flex-col gap-1 py-4 sm:py-6 flex-1">
                     {navigationLinks.map((link) => (
                       <button
                         key={link.name}
                         onClick={() => scrollToSection(link.href)}
-                        className="text-left px-4 py-3 text-foreground hover:text-primary hover:bg-secondary/50 rounded-md transition-colors duration-200"
+                        className="text-left px-4 py-3 sm:py-4 text-foreground hover:text-primary hover:bg-secondary/50 rounded-md transition-colors duration-200 mobile-nav-item"
                         aria-label={`Navigate to ${link.name} section`}
                       >
                         {link.name}
@@ -202,18 +203,18 @@ export function Header() {
                   </nav>
 
                   {/* Mobile Social Links */}
-                  <div className="pt-6 border-t border-border">
-                    <h3 className="text-sm font-semibold text-foreground mb-4">
+                  <div className="pt-4 sm:pt-6 border-t border-border">
+                    <h3 className="text-sm font-semibold text-foreground mb-3 sm:mb-4 px-4">
                       Join Our Community
                     </h3>
-                    <div className="flex flex-col gap-3">
+                    <div className="flex flex-col gap-2 sm:gap-3 px-4">
                       {socialLinks.map((social) => (
                         <Button
                           key={social.name}
                           variant="outline"
                           size="sm"
                           asChild
-                          className="justify-start"
+                          className="justify-start mobile-button-sm"
                         >
                           <a
                             href={social.href}

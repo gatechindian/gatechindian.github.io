@@ -35,9 +35,28 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   html {
     scroll-behavior: smooth;
+    /* Prevent horizontal scroll on mobile */
+    overflow-x: hidden;
+  }
+  
+  /* Improve touch targets on mobile */
+  button, a {
+    @apply touch-manipulation;
+  }
+  
+  /* Better text rendering on mobile */
+  h1, h2, h3, h4, h5, h6 {
+    @apply antialiased;
+  }
+  
+  /* Improve mobile scrolling */
+  * {
+    -webkit-overflow-scrolling: touch;
   }
 }
 
@@ -47,6 +66,67 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  
+  /* Mobile-specific parallax adjustments */
+  @media (max-width: 768px) {
+    .parallax-bg {
+      background-attachment: scroll;
+    }
+  }
+  
+  /* Mobile-optimized container padding */
+  .mobile-container {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Mobile-friendly text sizes */
+  .mobile-text-lg {
+    @apply text-base sm:text-lg;
+  }
+  
+  .mobile-text-xl {
+    @apply text-lg sm:text-xl;
+  }
+  
+  .mobile-text-2xl {
+    @apply text-xl sm:text-2xl;
+  }
+  
+  .mobile-text-3xl {
+    @apply text-2xl sm:text-3xl;
+  }
+  
+  .mobile-text-4xl {
+    @apply text-3xl sm:text-4xl;
+  }
+  
+  .mobile-text-5xl {
+    @apply text-4xl sm:text-5xl;
+  }
+  
+  /* Mobile-friendly spacing */
+  .mobile-py {
+    @apply py-12 sm:py-16 lg:py-20;
+  }
+  
+  .mobile-mb {
+    @apply mb-8 sm:mb-12 lg:mb-16;
+  }
+  
+  /* Mobile-friendly grid */
+  .mobile-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8;
+  }
+  
+  /* Mobile-friendly flex */
+  .mobile-flex-col {
+    @apply flex flex-col sm:flex-row;
+  }
+  
+  /* Mobile-friendly buttons */
+  .mobile-button {
+    @apply w-full sm:w-auto;
   }
 }
 
@@ -68,6 +148,14 @@
 .card-hover:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile-friendly card hover */
+@media (max-width: 768px) {
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .parallax-section {
@@ -105,4 +193,95 @@ header {
 /* Smooth scrolling offset for fixed header */
 section {
   scroll-margin-top: 80px;
+}
+
+/* Mobile-specific header adjustments */
+@media (max-width: 768px) {
+  section {
+    scroll-margin-top: 70px;
+  }
+}
+
+/* Mobile-friendly navigation */
+@media (max-width: 768px) {
+  .mobile-nav-item {
+    @apply py-4 px-6 text-lg;
+  }
+}
+
+/* Mobile-friendly cards */
+@media (max-width: 768px) {
+  .mobile-card {
+    @apply p-4;
+  }
+  
+  .mobile-card-content {
+    @apply p-4;
+  }
+}
+
+/* Mobile-friendly buttons */
+@media (max-width: 768px) {
+  .mobile-button-lg {
+    @apply px-6 py-4 text-base;
+  }
+  
+  .mobile-button-sm {
+    @apply px-4 py-2 text-sm;
+  }
+}
+
+/* Mobile-friendly spacing */
+@media (max-width: 768px) {
+  .mobile-section-padding {
+    @apply py-12 px-4;
+  }
+  
+  .mobile-container-padding {
+    @apply px-4;
+  }
+}
+
+/* Mobile-friendly typography */
+@media (max-width: 768px) {
+  .mobile-heading {
+    @apply text-2xl sm:text-3xl md:text-4xl;
+  }
+  
+  .mobile-subheading {
+    @apply text-lg sm:text-xl md:text-2xl;
+  }
+  
+  .mobile-body {
+    @apply text-sm sm:text-base;
+  }
+}
+
+/* Mobile-friendly images */
+@media (max-width: 768px) {
+  .mobile-image {
+    @apply w-full h-auto;
+  }
+}
+
+/* Mobile-friendly forms */
+@media (max-width: 768px) {
+  .mobile-form {
+    @apply space-y-4;
+  }
+  
+  .mobile-input {
+    @apply text-base py-3 px-4;
+  }
+}
+
+/* Mobile-friendly modals and sheets */
+@media (max-width: 768px) {
+  .mobile-sheet {
+    @apply w-full max-w-sm;
+  }
+  
+  .mobile-modal {
+    @apply mx-4;
+  }
 }

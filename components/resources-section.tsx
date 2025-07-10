@@ -73,26 +73,26 @@ export function ResourcesSection() {
   }, [])
 
   return (
-    <section id="resources" className="py-20 bg-secondary/50">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="resources" className="mobile-py bg-secondary/50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className={`fade-in ${isVisible ? 'visible' : ''}`}>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <div className="text-center mobile-mb">
+            <h2 className="mobile-text-4xl font-bold text-foreground mb-4 sm:mb-6">
               Essential Resources
             </h2>
-            <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <div className="w-20 sm:w-24 h-1 bg-primary mx-auto mb-6 sm:mb-8"></div>
+            <p className="mobile-text-lg text-muted-foreground max-w-3xl mx-auto px-4">
               Discover the key resources that will help you succeed in your Georgia Tech online master's program.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
             {resources.map((resource, index) => (
-              <Card key={index} className="border-0 shadow-lg card-hover bg-card">
-                <CardContent className="p-8">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <resource.icon className="w-7 h-7 text-primary" />
+              <Card key={index} className="border-0 shadow-lg card-hover bg-card mobile-card">
+                <CardContent className="p-6 sm:p-8">
+                  <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
+                    <div className="w-12 h-14 sm:w-14 sm:h-14 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <resource.icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
@@ -100,19 +100,19 @@ export function ResourcesSection() {
                           {resource.category}
                         </span>
                       </div>
-                      <h3 className="text-xl font-bold text-foreground mb-3">
+                      <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3">
                         {resource.title}
                       </h3>
                     </div>
                   </div>
                   
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-muted-foreground leading-relaxed mb-4 sm:mb-6 mobile-body">
                     {resource.description}
                   </p>
                   
                   <Button 
                     asChild
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mobile-button-sm"
                   >
                     <a 
                       href={resource.link} 
@@ -121,7 +121,7 @@ export function ResourcesSection() {
                       className="flex items-center justify-center gap-2"
                     >
                       Visit Resource
-                      <ExternalLink className="w-4 h-4" />
+                      <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
                     </a>
                   </Button>
                 </CardContent>
@@ -129,28 +129,28 @@ export function ResourcesSection() {
             ))}
           </div>
           
-          <div className="mt-16 text-center">
+          <div className="mt-12 sm:mt-16 text-center">
             <Card className="border-0 shadow-lg bg-card">
-              <CardContent className="p-8">
-                <div className="flex items-center justify-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                    <Users className="w-8 h-8 text-primary" />
+              <CardContent className="p-6 sm:p-8">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Users className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-2">
+                  <div className="text-center sm:text-left">
+                    <h3 className="mobile-text-2xl font-bold text-foreground mb-2">
                       Join Our Community
                     </h3>
-                    <p className="text-muted-foreground">
+                    <p className="text-muted-foreground mobile-body">
                       Connect with fellow Indian students and get personalized guidance
                     </p>
                   </div>
                 </div>
                 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                   <Button 
                     asChild
                     size="lg"
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground mobile-button"
                   >
                     <a 
                       href="https://www.linkedin.com/groups/14514097/" 
@@ -158,9 +158,9 @@ export function ResourcesSection() {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2"
                     >
-                      <Users className="w-5 h-5" />
+                      <Users className="w-4 h-4 sm:w-5 sm:h-5" />
                       LinkedIn Community
-                      <ExternalLink className="w-4 h-4" />
+                      <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
                     </a>
                   </Button>
                   
@@ -168,7 +168,7 @@ export function ResourcesSection() {
                     asChild
                     size="lg"
                     variant="outline"
-                    className="border-primary text-primary hover:bg-primary/10"
+                    className="border-primary text-primary hover:bg-primary/10 mobile-button"
                   >
                     <a 
                       href="https://discord.gg/DHHtG2hK" 
@@ -176,9 +176,9 @@ export function ResourcesSection() {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2"
                     >
-                      <MessageSquare className="w-5 h-5" />
+                      <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5" />
                       Discord Server
-                      <ExternalLink className="w-4 h-4" />
+                      <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
                     </a>
                   </Button>
                 </div>

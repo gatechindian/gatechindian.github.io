@@ -164,27 +164,27 @@ export function JobPrepSection() {
     : jobPrepResources.filter(resource => resource.category === selectedCategory)
 
   return (
-    <section id="job-prep" className="py-20 bg-secondary/50">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="job-prep" className="mobile-py bg-secondary/50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className={`fade-in ${isVisible ? 'visible' : ''}`}>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <div className="text-center mobile-mb">
+            <h2 className="mobile-text-4xl font-bold text-foreground mb-4 sm:mb-6">
               Job Preparation Resources
             </h2>
-            <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <div className="w-20 sm:w-24 h-1 bg-primary mx-auto mb-6 sm:mb-8"></div>
+            <p className="mobile-text-lg text-muted-foreground max-w-3xl mx-auto px-4">
               Comprehensive resources to help you prepare for technical interviews, 
               build your resume, and land your dream job in tech.
             </p>
           </div>
 
           {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-12 px-4">
             <Button
               variant={selectedCategory === 'All' ? 'default' : 'outline'}
               size="sm"
               onClick={() => setSelectedCategory('All')}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground text-xs sm:text-sm px-3 sm:px-4 py-2"
             >
               All Resources
             </Button>
@@ -194,20 +194,22 @@ export function JobPrepSection() {
                 variant={selectedCategory === category.name ? 'default' : 'outline'}
                 size="sm"
                 onClick={() => setSelectedCategory(category.name)}
-                className={selectedCategory === category.name ? 'bg-primary hover:bg-primary/90 text-primary-foreground' : ''}
+                className={`text-xs sm:text-sm px-3 sm:px-4 py-2 ${
+                  selectedCategory === category.name ? 'bg-primary hover:bg-primary/90 text-primary-foreground' : ''
+                }`}
               >
                 {category.name}
               </Button>
             ))}
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="mobile-grid mb-12 sm:mb-16">
             {filteredResources.map((resource, index) => (
-              <Card key={index} className="border-0 shadow-lg card-hover bg-card">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <resource.icon className="w-6 h-6 text-primary" />
+              <Card key={index} className="border-0 shadow-lg card-hover bg-card mobile-card">
+                <CardContent className="p-4 sm:p-6">
+                  <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <resource.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
@@ -220,17 +222,17 @@ export function JobPrepSection() {
                           </Badge>
                         )}
                       </div>
-                      <h3 className="text-lg font-bold text-foreground mb-1">
+                      <h3 className="text-base sm:text-lg font-bold text-foreground mb-1">
                         {resource.title}
                       </h3>
                     </div>
                   </div>
                   
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-3 sm:mb-4">
                     {resource.description}
                   </p>
                   
-                  <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center justify-between mb-3 sm:mb-4">
                     <span className="text-xs text-muted-foreground">
                       Level: {resource.difficulty}
                     </span>
@@ -238,8 +240,7 @@ export function JobPrepSection() {
                   
                   <Button 
                     asChild
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-                    size="sm"
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mobile-button-sm"
                   >
                     <a 
                       href={resource.link} 
@@ -248,7 +249,7 @@ export function JobPrepSection() {
                       className="flex items-center justify-center gap-2"
                     >
                       Visit Resource
-                      <ExternalLink className="w-4 h-4" />
+                      <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
                     </a>
                   </Button>
                 </CardContent>
@@ -258,26 +259,26 @@ export function JobPrepSection() {
           
           <div className="text-center">
             <Card className="border-0 shadow-lg bg-gradient-to-r from-primary/10 to-accent/10">
-              <CardContent className="p-8">
-                <div className="flex items-center justify-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center">
-                    <Briefcase className="w-8 h-8 text-primary" />
+              <CardContent className="p-6 sm:p-8">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/20 rounded-full flex items-center justify-center">
+                    <Briefcase className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-2">
+                  <div className="text-center sm:text-left">
+                    <h3 className="mobile-text-2xl font-bold text-foreground mb-2">
                       Job Prep Community
                     </h3>
-                    <p className="text-muted-foreground">
+                    <p className="text-muted-foreground mobile-body">
                       Connect with fellow job seekers and find accountability buddy, share interview experiences, and get career advice
                     </p>
                   </div>
                 </div>
                 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                   <Button 
                     asChild
                     size="lg"
-                    className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground mobile-button"
                   >
                     <a 
                       href="https://www.linkedin.com/groups/14514097/" 
@@ -285,9 +286,9 @@ export function JobPrepSection() {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2"
                     >
-                      <Users className="w-5 h-5" />
+                      <Users className="w-4 h-4 sm:w-5 sm:h-5" />
                       Join Job Prep Group
-                      <ExternalLink className="w-4 h-4" />
+                      <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
                     </a>
                   </Button>
                   
