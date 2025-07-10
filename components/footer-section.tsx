@@ -12,16 +12,11 @@ export function FooterSection() {
         <div className="grid md:grid-cols-3 gap-12">
           {/* About */}
           <div>
-            <h3 className="text-2xl font-bold mb-6">GaTech Indian Community</h3>
+            <h3 className="text-2xl font-bold mb-6">GaTech Indian </h3>
             <p className="text-background/80 leading-relaxed mb-6">
               Pursuing Georgia Tech online master's journey doesnt have to be lonely. 
               We're here to support and celebrate each other's success.
             </p>
-            <div className="flex items-center gap-2 text-sm text-background/60">
-              <span>Made with</span>
-              <Heart className="w-4 h-4 text-red-400" />
-              <span>by the community</span>
-            </div>
           </div>
           
           {/* Quick Links */}

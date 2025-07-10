@@ -38,7 +38,7 @@ export function HeroSection() {
               />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              GaTech Indian Community
+              GaTech Indian
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-light">
               The central hub for Indian students in Georgia Tech's OMSCS, OMSA, and Cyber Security programs
