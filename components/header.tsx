@@ -92,11 +92,7 @@ export function Header() {
               }`}>
                 GaTech Indian
               </h1>
-              <p className={`text-sm transition-colors duration-300 ${
-                isScrolled ? 'text-muted-foreground' : 'text-white/80'
-              }`}>
-                Community
-              </p>
+
             </div>
           </div>
 
@@ -179,9 +175,6 @@ export function Header() {
                         <h2 className="text-lg font-bold text-foreground">
                           GaTech Indian
                         </h2>
-                        <p className="text-sm text-muted-foreground">
-                          Community
-                        </p>
                       </div>
                     </div>
                     <Button
