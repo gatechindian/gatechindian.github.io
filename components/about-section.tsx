@@ -40,14 +40,12 @@ export function AboutSection() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                We are a vibrant community of Indian students pursuing Georgia Tech's prestigious online master's programs. 
-                Our mission is to provide a centralized platform where students can share experiences, seek guidance, 
-                and support each other throughout their academic journey.
+                We are a vibrant community of Indian students pursuing and alumni of Georgia Tech's prestigious online master's programs from anywhere on the globe. 
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Whether you're navigating the application process, managing course logistics, or searching for career opportunities, 
-                our community brings together the collective knowledge and experience of hundreds of students and alumni.
+                Just like in-person college education online masters students also have classmates albeit virtual.
+                Connect with other Indian students and grow leveraging the collective knowledge and experience of current students and alumni.
               </p>
             </div>
             

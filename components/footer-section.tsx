@@ -14,8 +14,8 @@ export function FooterSection() {
           <div>
             <h3 className="text-2xl font-bold mb-6">GaTech Indian Community</h3>
             <p className="text-background/80 leading-relaxed mb-6">
-              Your trusted companion throughout your Georgia Tech online master's journey. 
-              We're here to support, guide, and celebrate your success.
+              Pursuing Georgia Tech online master's journey doesnt have to be lonely. 
+              We're here to support and celebrate each other's success.
             </p>
             <div className="flex items-center gap-2 text-sm text-background/60">
               <span>Made with</span>
@@ -93,22 +93,13 @@ export function FooterSection() {
                 </a>
               </Button>
               
-              <div className="pt-4 border-t border-background/20">
-                <p className="text-sm text-background/80 mb-2">
-                  <Mail className="w-4 h-4 inline mr-2" />
-                  For inquiries:
-                </p>
-                <p className="text-sm text-background/60">
-                  Please connect with us through our LinkedIn community for all questions and support.
-                </p>
-              </div>
             </div>
           </div>
         </div>
         
         <div className="mt-12 pt-8 border-t border-background/20 text-center">
           <p className="text-background/60 text-sm">
-            © 2025 GaTech Indian Community. A student-led initiative to support Indian students in Georgia Tech's online master's programs.
+            © 2025 GaTech Indian Community. Indian students support group for those in Georgia Tech's online master's programs.
           </p>
         </div>
       </div>

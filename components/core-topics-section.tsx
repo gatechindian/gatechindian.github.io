@@ -8,24 +8,23 @@ import { CreditCard, Briefcase, MapPin, GraduationCap } from 'lucide-react'
 const topics = [
   {
     icon: CreditCard,
-    title: 'Course Payment Logistics',
-    description: 'Navigate tuition payments, employer reimbursements, and financial aid options. Get practical tips for managing payments from India.',
+    title: 'Course Logistics',
+    description: 'Get practical tips for managing payments from India.',
     details: [
-      'International payment methods and wire transfers',
-      'Employer tuition assistance programs',
-      'Financial aid opportunities for international students',
-      'Payment deadlines and academic calendar'
+      'Course based study groups',
+      'Course payment methods',
+      'program accountability',
     ]
   },
   {
     icon: Briefcase,
     title: 'Job Search & Career',
-    description: 'Leverage your Georgia Tech degree for career advancement. Learn from success stories and build your professional network.',
+    description: 'Learn from success stories and build your professional network.',
     details: [
-      'Resume enhancement with Georgia Tech credentials',
-      'Industry-specific career paths and opportunities',
-      'Networking strategies within the community',
-      'Interview preparation and skill development'
+      'Resume review',
+      'Job prep study group',
+      'Interview preparation and skill development',
+      'Job search resources and job fairs'
     ]
   },
   {
@@ -33,10 +32,9 @@ const topics = [
     title: 'Location-Specific Meetups',
     description: 'Connect with fellow students in your city. Organize study groups, networking events, and social gatherings.',
     details: [
-      'City-wise student groups and meetups',
-      'Study group formation and collaboration',
+      'City-wise student meetups',
       'Local networking events and gatherings',
-      'Alumni connections in your area'
+      'Alumni connections'
     ]
   }
 ]
@@ -72,7 +70,7 @@ export function CoreTopicsSection() {
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our community focuses on the key areas that matter most to Indian students in Georgia Tech's online programs.
+              Our community focuses on areas that matter to Indians pusuing in Georgia Tech's online programs from anywhere on the globe.
             </p>
           </div>
           

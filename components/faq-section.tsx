@@ -82,12 +82,8 @@ const faqData = [
         answer: 'Stable Internet Connection: Most critical requirement. Have a backup internet option (mobile hotspot) ready. Webcam and Microphone: Functional webcam and microphone are mandatory. Private, Quiet Environment: Honorlock requires a room scan before the exam. You must be in a private room with a clean desk, free of unauthorized materials.'
       },
       {
-        question: 'What are common issues with proctored exams?',
-        answer: 'Browser Extensions: Disable all browser extensions (especially Grammarly) before starting an exam. Accidental Hotkeys: Be mindful of keyboard shortcuts that might navigate away from the exam page. System Flags: The software may flag behavior like looking away from the screen, though these are often false positives reviewed by humans.'
-      },
-      {
         question: 'Are all courses exam-based?',
-        answer: 'No. Many courses are entirely project-based and do not have proctored exams. Courses like Software Development Process (SDP) are known for being project-only, which can be a strategic choice for students concerned about internet stability or proctoring logistics.'
+        answer: 'No. Many courses are entirely project-based and do not have proctored exams.'
       }
     ]
   },
@@ -96,7 +92,7 @@ const faqData = [
     questions: [
       {
         question: 'How does the program help with job searches?',
-        answer: 'The curriculum imparts practical, in-demand skills. Courses provide hands-on experience with industry-standard tools like Tableau, D3.js, and Splunk. Completing challenging projects provides concrete achievements for your resume. Students frequently report that coursework directly translates to professional success.'
+        answer: 'The curriculum imparts practical, in-demand skills. Completing challenging projects provides concrete achievements for your resume.'
       },
       {
         question: 'Will my diploma say "Online"?',
