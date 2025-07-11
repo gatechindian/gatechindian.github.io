@@ -24,25 +24,37 @@ export function FooterSection() {
             <h4 className="text-xl font-semibold mb-6">Quick Links</h4>
             <div className="space-y-3">
               <a 
-                href="#about-section" 
+                href="#about" 
                 className="block text-background/80 hover:text-background transition-colors"
               >
                 About Us
               </a>
               <a 
-                href="#core-topics-section" 
+                href="#core-topics" 
                 className="block text-background/80 hover:text-background transition-colors"
               >
                 Core Topics
               </a>
               <a 
-                href="#faq-section" 
+                href="#city-meetups" 
+                className="block text-background/80 hover:text-background transition-colors"
+              >
+                City Meetups
+              </a>
+              <a 
+                href="#job-prep" 
+                className="block text-background/80 hover:text-background transition-colors"
+              >
+                Job Prep
+              </a>
+              <a 
+                href="#faqs" 
                 className="block text-background/80 hover:text-background transition-colors"
               >
                 FAQs
               </a>
               <a 
-                href="#resources-section" 
+                href="#resources" 
                 className="block text-background/80 hover:text-background transition-colors"
               >
                 Resources

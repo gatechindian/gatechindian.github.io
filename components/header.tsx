@@ -10,9 +10,9 @@ import { Menu, X, Users, MessageCircle, ExternalLink } from 'lucide-react'
 const navigationLinks = [
   { name: 'Home', href: '#hero' },
   { name: 'About', href: '#about' },
-  { name: 'Course Logistics', href: '#core-topics' },
-  { name: 'Job Search', href: '#core-topics' },
-  { name: 'Meetups', href: '#core-topics' },
+  { name: 'Core Topics', href: '#core-topics' },
+  { name: 'Job Prep', href: '#job-prep' },
+  { name: 'City Meetups', href: '#city-meetups' },
   { name: 'FAQs', href: '#faqs' },
   { name: 'Resources', href: '#resources' },
 ]
