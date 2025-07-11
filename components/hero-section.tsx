@@ -37,10 +37,10 @@ export function HeroSection() {
                 priority
               />
             </div>
-            <h1 className="mobile-text-5xl font-bold mb-4 sm:mb-6 leading-tight">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
               GaTech Indian
             </h1>
-            <p className="mobile-text-xl mb-6 sm:mb-8 max-w-3xl mx-auto font-light px-4">
+            <p className="text-xl sm:text-2xl md:text-3xl mb-6 sm:mb-8 max-w-3xl mx-auto font-light px-4">
               The central hub for Indian students in Georgia Tech's OMSCS, OMSA, and Cyber Security programs
             </p>
           </div>
@@ -49,7 +49,7 @@ export function HeroSection() {
             <Button 
               asChild
               size="lg"
-              className="mobile-button bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+              className="mobile-button bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-4 sm:py-6 text-lg sm:text-xl font-semibold rounded-lg transition-all duration-300 hover:scale-105"
             >
               <a 
                 href="https://www.linkedin.com/groups/14514097/" 
@@ -67,7 +67,7 @@ export function HeroSection() {
               asChild
               size="lg"
               variant="outline"
-              className="mobile-button bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white/50 px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+              className="mobile-button bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white/50 px-6 sm:px-8 py-4 sm:py-6 text-lg sm:text-xl font-semibold rounded-lg transition-all duration-300 hover:scale-105"
             >
               <a 
                 href="https://discord.gg/DHHtG2hK" 

@@ -183,7 +183,7 @@ export function FAQSection() {
                             </div>
                           </CollapsibleTrigger>
                           <CollapsibleContent className="px-4 pb-4">
-                            <p className="text-muted-foreground leading-relaxed pt-3">
+                            <p className="text-foreground leading-relaxed pt-3">
                               {faq.answer}
                             </p>
                           </CollapsibleContent>

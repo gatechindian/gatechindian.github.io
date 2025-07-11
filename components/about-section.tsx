@@ -45,11 +45,11 @@ export function AboutSection() {
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-foreground leading-relaxed">
                 We are a vibrant community of Indian students pursuing and alumni of Georgia Tech's prestigious online master's programs from anywhere on the globe. 
               </p>
               
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-foreground leading-relaxed">
               Just like in regular college, online master's students have classmates too—just virtually. 
               Connect with other Indian students and make the most of everyone's knowledge and experience, 
               including current students and alumni. Let's grow together!
@@ -65,7 +65,7 @@ export function AboutSection() {
                     </div>
                     <h3 className="text-xl font-semibold">WhatsApp Groups</h3>
                   </div>
-                  <p className="text-muted-foreground">
+                  <p className="text-foreground">
                     Real-time discussions and quick help for immediate questions and updates.
                   </p>
                 </CardContent>
@@ -79,7 +79,7 @@ export function AboutSection() {
                     </div>
                     <h3 className="text-xl font-semibold">LinkedIn Community</h3>
                   </div>
-                  <p className="text-muted-foreground">
+                  <p className="text-foreground">
                     Professional networking, career discussions, and alumni connections.
                   </p>
                 </CardContent>
@@ -93,7 +93,7 @@ export function AboutSection() {
                     </div>
                     <h3 className="text-xl font-semibold">Discord Server</h3>
                   </div>
-                  <p className="text-muted-foreground">
+                  <p className="text-foreground">
                     Structured discussions, study groups, and project collaboration spaces.
                   </p>
                 </CardContent>

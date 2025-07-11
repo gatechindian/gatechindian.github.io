@@ -86,7 +86,7 @@ export function CityMeetupsSection() {
               City Meetups
             </h2>
             <div className="w-20 sm:w-24 h-1 bg-primary mx-auto mb-6 sm:mb-8"></div>
-            <p className="mobile-text-lg text-muted-foreground max-w-3xl mx-auto px-4">
+            <p className="mobile-text-lg text-foreground max-w-3xl mx-auto px-4">
               Join local meetups in major Indian cities to connect with fellow OMSCS students, 
               share experiences, and build your professional network.
             </p>
@@ -107,7 +107,7 @@ export function CityMeetupsSection() {
                     </div>
                   </div>
                   
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-3 sm:mb-4">
+                  <p className="text-foreground text-sm leading-relaxed mb-3 sm:mb-4">
                     {city.description}
                   </p>
                   
@@ -133,7 +133,7 @@ export function CityMeetupsSection() {
                     <h3 className="mobile-text-2xl font-bold text-foreground mb-2">
                       Start Your Own Meetup
                     </h3>
-                    <p className="text-muted-foreground mobile-body">
+                    <p className="text-foreground mobile-body">
                       Don't see your city? Organize meetups in your area and grow the community
                     </p>
                   </div>

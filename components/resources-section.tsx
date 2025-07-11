@@ -87,7 +87,7 @@ export function ResourcesSection() {
               Essential Resources
             </h2>
             <div className="w-20 sm:w-24 h-1 bg-primary mx-auto mb-6 sm:mb-8"></div>
-            <p className="mobile-text-lg text-muted-foreground max-w-3xl mx-auto px-4">
+            <p className="mobile-text-lg text-foreground max-w-3xl mx-auto px-4">
               Discover the key resources that will help you succeed in your Georgia Tech online master's program.
             </p>
           </div>
@@ -112,7 +112,7 @@ export function ResourcesSection() {
                     </div>
                   </div>
                   
-                  <p className="text-muted-foreground leading-relaxed mb-4 sm:mb-6 mobile-body">
+                  <p className="text-foreground leading-relaxed mb-4 sm:mb-6 mobile-body">
                     {resource.description}
                   </p>
                   
@@ -146,7 +146,7 @@ export function ResourcesSection() {
                     <h3 className="mobile-text-2xl font-bold text-foreground mb-2">
                       Join Our Community
                     </h3>
-                    <p className="text-muted-foreground mobile-body">
+                    <p className="text-foreground mobile-body">
                       Connect with fellow Indian students and get personalized guidance
                     </p>
                   </div>

@@ -69,7 +69,7 @@ export function CoreTopicsSection() {
               Core Discussion Topics
             </h2>
             <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-foreground max-w-3xl mx-auto">
               Our community focuses on areas that matter to Indians pusuing in Georgia Tech's online programs from anywhere on the globe.
             </p>
           </div>
@@ -86,7 +86,7 @@ export function CoreTopicsSection() {
                     {topic.title}
                   </h3>
                   
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                  <p className="text-foreground mb-6 leading-relaxed">
                     {topic.description}
                   </p>
                   
@@ -94,7 +94,7 @@ export function CoreTopicsSection() {
                     {topic.details.map((detail, detailIndex) => (
                       <li key={detailIndex} className="flex items-start gap-3">
                         <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-sm text-muted-foreground">{detail}</span>
+                        <span className="text-sm text-foreground">{detail}</span>
                       </li>
                     ))}
                   </ul>

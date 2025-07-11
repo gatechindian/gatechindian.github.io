@@ -178,7 +178,7 @@ export function JobPrepSection() {
               Job Preparation Resources
             </h2>
             <div className="w-20 sm:w-24 h-1 bg-primary mx-auto mb-6 sm:mb-8"></div>
-            <p className="mobile-text-lg text-muted-foreground max-w-3xl mx-auto px-4">
+            <p className="mobile-text-lg text-foreground max-w-3xl mx-auto px-4">
               Comprehensive resources to help you prepare for technical interviews, 
               build your resume, and land your dream job in tech.
             </p>
@@ -234,7 +234,7 @@ export function JobPrepSection() {
                     </div>
                   </div>
                   
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-3 sm:mb-4">
+                  <p className="text-foreground text-sm leading-relaxed mb-3 sm:mb-4">
                     {resource.description}
                   </p>
                   
@@ -274,7 +274,7 @@ export function JobPrepSection() {
                     <h3 className="mobile-text-2xl font-bold text-foreground mb-2">
                       Job Prep Community
                     </h3>
-                    <p className="text-muted-foreground mobile-body">
+                    <p className="text-foreground mobile-body">
                       Connect with fellow job seekers and find accountability buddy, share interview experiences, and get career advice
                     </p>
                   </div>
