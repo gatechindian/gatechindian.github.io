@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { ExternalLink, BookOpen, Users, Globe, MessageSquare } from 'lucide-react'
+import { Breadcrumb, breadcrumbConfigs } from '@/components/breadcrumb'
 
 const resources = [
   {
@@ -76,6 +77,11 @@ export function ResourcesSection() {
     <section id="resources" className="mobile-py bg-secondary/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className={`fade-in ${isVisible ? 'visible' : ''}`}>
+          {/* Breadcrumb Navigation */}
+          <div className="mb-8">
+            <Breadcrumb items={breadcrumbConfigs.resources} />
+          </div>
+          
           <div className="text-center mobile-mb">
             <h2 className="mobile-text-4xl font-bold text-foreground mb-4 sm:mb-6">
               Essential Resources

@@ -4,6 +4,7 @@
 import { useState, useEffect } from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Users, MessageSquare, Linkedin } from 'lucide-react'
+import { Breadcrumb, breadcrumbConfigs } from '@/components/breadcrumb'
 
 export function AboutSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -30,6 +31,11 @@ export function AboutSection() {
     <section id="about" className="py-20 bg-background">
       <div className="max-w-6xl mx-auto px-6">
         <div className={`fade-in ${isVisible ? 'visible' : ''}`}>
+          {/* Breadcrumb Navigation */}
+          <div className="mb-8">
+            <Breadcrumb items={breadcrumbConfigs.about} />
+          </div>
+          
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               About Our Community

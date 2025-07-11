@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
 import { ChevronDown, ChevronUp } from 'lucide-react'
+import { Breadcrumb, breadcrumbConfigs } from '@/components/breadcrumb'
 
 const faqData = [
   {
@@ -132,6 +133,11 @@ export function FAQSection() {
     <section id="faqs" className="py-20 bg-background">
       <div className="max-w-4xl mx-auto px-6">
         <div className={`fade-in ${isVisible ? 'visible' : ''}`}>
+          {/* Breadcrumb Navigation */}
+          <div className="mb-8">
+            <Breadcrumb items={breadcrumbConfigs.faq} />
+          </div>
+          
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Frequently Asked Questions

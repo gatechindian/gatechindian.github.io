@@ -16,6 +16,7 @@ import {
   Target,
   TrendingUp
 } from 'lucide-react'
+import { Breadcrumb, breadcrumbConfigs } from '@/components/breadcrumb'
 
 const jobPrepResources = [
   {
@@ -167,6 +168,11 @@ export function JobPrepSection() {
     <section id="job-prep" className="mobile-py bg-secondary/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className={`fade-in ${isVisible ? 'visible' : ''}`}>
+          {/* Breadcrumb Navigation */}
+          <div className="mb-8">
+            <Breadcrumb items={breadcrumbConfigs.jobPrep} />
+          </div>
+          
           <div className="text-center mobile-mb">
             <h2 className="mobile-text-4xl font-bold text-foreground mb-4 sm:mb-6">
               Job Preparation Resources

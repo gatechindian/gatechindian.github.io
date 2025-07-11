@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { MapPin, Calendar, Users, ExternalLink } from 'lucide-react'
+import { Breadcrumb, breadcrumbConfigs } from '@/components/breadcrumb'
 
 const cities = [
   {
@@ -75,6 +76,11 @@ export function CityMeetupsSection() {
     <section id="city-meetups" className="mobile-py bg-background">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className={`fade-in ${isVisible ? 'visible' : ''}`}>
+          {/* Breadcrumb Navigation */}
+          <div className="mb-8">
+            <Breadcrumb items={breadcrumbConfigs.cityMeetups} />
+          </div>
+          
           <div className="text-center mobile-mb">
             <h2 className="mobile-text-4xl font-bold text-foreground mb-4 sm:mb-6">
               City Meetups
